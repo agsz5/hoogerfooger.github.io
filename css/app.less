@@ -1,5 +1,249 @@
+@ayvygold: #F8D073;
+@redfilter: #7F2008;
+
 body {
-    h1, h4 {
-        color: red;
+    background-image: url('../images/background.jpg');
+    font-size: 16px;
+} 
+
+/* Shared
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.bold {
+    font-weight: bold;
+}
+.left-align {
+    text-align: left !important;
+}
+p {
+    &.subtitle {
+        font-size: 20px;
     }
 }
+.button {
+    border-radius: 100px;
+    &.gold {
+        border-color:@ayvygold !important;
+        &.button-primary {
+            background-color: @ayvygold !important;
+            &:hover {
+                background-color: darken(@ayvygold,8%) !important;
+            }
+        }
+        &.button-negative {
+            color:@ayvygold !important;
+            background-color: none !important;
+            &:hover {
+                border-color: lighten(@ayvygold,8%) !important;
+                color:lighten(@ayvygold,12%) !important;
+            }
+        }
+    }
+    &.white {
+        border-color:white !important;
+        &.button-negative {
+            color:white !important;
+            background-color: none !important;
+        }
+    }
+  }
+  
+  /* Sections
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  .header {
+      &.bandphoto {
+        background-image: url('../images/bandphoto_horizontal.jpg');
+        background-size: cover;
+        position: relative;
+      }
+      .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: 0.2;
+        transition: 0.5s ease;
+        background-color:@redfilter;
+        overflow: hidden;
+        }
+    }
+  .section {
+    padding: 8rem 0 7rem;
+    text-align: center;
+    color: white;
+    &.hero {
+
+    }
+    &.latest {
+        background: transparent !important;
+    }
+  }
+  .section-heading,
+  .section-description {
+    margin-bottom: 1.2rem;
+  }
+  
+  /* Hero
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  .phones {
+    position: relative;
+  }
+  .album {
+        display: inline-block;
+        margin-top: 10px;
+        width: 100%;
+        max-width: 300px;
+        -webkit-box-shadow: 0px 10px 20px 2px rgba(0,0,0,0.55);
+        -moz-box-shadow: 0px 10px 20px 2px rgba(0,0,0,0.55);
+        box-shadow: 0px 10px 20px 2px rgba(0,0,0,0.55);
+        }
+  .phone {
+    position: relative;
+    max-width: 80%;
+    margin: 3rem auto -12rem;
+  }
+  .phone + .phone {
+    display: none;
+  }
+  
+  /* Values
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  .values {
+    // background-image: url('../images/background.jpg');
+    // background-size: cover;
+    color: #fff;
+    padding-bottom: 5rem;
+  }
+  .value-multiplier {
+    margin-bottom: .5rem;
+    color: #11DFC7;
+  }
+  .value-heading {
+    margin-bottom: .3rem;
+  }
+  .value-description {
+    opacity: .8;
+    font-weight: 300;
+  }
+  
+  /* Help
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  .get-help {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Categories
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  .categories {
+    // background-image: url('../images/background.jpg');
+    // background-size: cover;
+    color: #fff;
+  }
+  .categories .section-description { 
+    margin-bottom: 4rem;
+  }
+  
+  /* Bigger than 550 */
+  @media (min-width: 550px) {
+    .section {
+      padding: 12rem 0 11rem;
+      &.latest {
+        padding: 0 0 11rem;
+        margin-top: -10rem;
+      }
+    }
+    .bandphoto {
+        min-height: 165px;
+    }
+    .hero, .bandphoto {
+      padding-bottom: 12rem;
+      text-align: left;
+      height: 165px;
+    }
+    .phone {
+      position: absolute;
+      top: -7rem;
+      right: 3rem;
+      max-height: 362px;
+      z-index: 3;
+    }
+    .phone + .phone {
+      top: -6rem;
+      display: block;
+      max-width: 73.8%;
+      right: 0;
+      z-index: 2;
+      max-height: 338px;
+    }
+    .hero-heading {
+      font-size: 2.4rem;
+    }
+  }
+  
+  /* Bigger than 750 */
+  @media (min-width: 750px) {
+    .hero {
+      height: 190px;
+    }
+    .bandphoto {
+        min-height: 190px;
+    }
+    .hero-heading {
+      font-size: 2.6rem;
+    }
+    .section {
+      padding: 14rem 0 15rem;
+      &.latest {
+        padding: 0 0 15rem;
+        margin-top: -14rem;
+      }
+    }
+    .hero, .bandphoto {
+      padding: 16rem 0 14rem;
+    }
+    .section-description {
+      max-width: 60%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .phone {
+      top: -14rem;
+      right: 5rem;
+      max-height: 510px;
+    }
+    .phone + .phone {
+      top: -12rem;
+      max-height: 472px;
+    }
+    .categories {
+      padding: 15rem 0 8rem;
+    }
+  }
+  
+  /* Bigger than 1000 */
+  @media (min-width: 1000px) {
+    .section {
+      padding: 20rem 0 19rem;
+      &.latest {
+          padding: 0 0 19rem;
+          margin-top: -20rem;
+      }
+    }
+    .hero {
+      padding: 22rem 0;
+    }
+    .bandphoto {
+        padding: 22rem 0;
+    }
+    .hero-heading {
+      font-size: 3.0rem;
+    }
+    .phone {
+      top: -16rem;
+      max-height: 615px;
+    }
+    .phone + .phone {
+      top: -14rem;
+      max-height: 570px;
+    }
+  }
