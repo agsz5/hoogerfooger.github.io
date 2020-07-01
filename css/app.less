@@ -69,14 +69,14 @@ p {
     }
   .section {
     padding: 8rem 0 7rem;
-    text-align: center;
     color: white;
-
+    text-align: center;
     &.hero {
-
+        text-align: left;
     }
     &.latest {
         background: transparent !important;
+        text-align: left;
     }
   }
   .section-heading,
@@ -135,8 +135,26 @@ p {
   }
   
 
-  /* Bigger than 50px */
- @media (min-width:50px) {
+  /* Small viewports up to 50px */
+ @media (max-width:550px) {
+    .hide-xs {
+        display: none;
+    }
+    p {
+        font-size: 1rem;
+        &.subtitle {
+            font-size: 1.5rem;
+        }
+    }
+     h1 {
+         margin-top: 1rem;
+         margin-bottom: 1rem;
+         font-size: 3rem;
+     }
+     .album {
+         max-width: 180px;
+         margin-bottom: 1rem;
+     }
      .bandphoto {
         padding: 8rem 0 7rem;
         min-height: 100px;
@@ -145,18 +163,40 @@ p {
         padding: 12rem 0 11rem;
         &.latest {
           padding: 0 0 11rem;
-          margin-top: -6rem;
+          margin-top: -8rem;
+          text-align: center;
+          .latest-text {
+              .subtitle {
+                  margin-bottom: 1.5rem;
+              }
+          }
+          .latest-button {
+              margin-top: 0 !important;
+          }
         }
       }
  }
 
   /* Bigger than 550 */
   @media (min-width: 550px) {
+    p {
+        font-size: 1rem;
+        &.subtitle {
+            font-size: 1.5rem;
+        }
+    }
+    h1 {
+        margin-bottom: 1rem;
+        font-size: 3rem;
+    }
     .section {
       padding: 12rem 0 11rem;
       &.latest {
         padding: 0 0 11rem;
         margin-top: -10rem;
+        .latest-text {
+            margin-top: 1rem;
+        }
       }
     }
     .bandphoto {
@@ -189,12 +229,20 @@ p {
   
   /* Bigger than 750 */
   @media (min-width: 750px) {
-    .hero {
-      height: 190px;
+    p {
+        font-size: 1.5rem;
+        &.subtitle {
+            font-size: 2rem;
+        }
     }
-    .bandphoto {
-        min-height: 190px;
+    h1 {
+        margin-bottom: 1rem;
+        font-size: 4rem;
     }
+    .hero, .bandphoto {
+      height: 120px; //was 190px
+    }
+
     .hero-heading {
       font-size: 2.6rem;
     }
@@ -203,6 +251,9 @@ p {
       &.latest {
         padding: 0 0 15rem;
         margin-top: -14rem;
+        .latest-text {
+            margin-top: 2rem;
+        }
       }
     }
     .hero, .bandphoto {
@@ -213,15 +264,6 @@ p {
       margin-left: auto;
       margin-right: auto;
     }
-    .phone {
-      top: -14rem;
-      right: 5rem;
-      max-height: 510px;
-    }
-    .phone + .phone {
-      top: -12rem;
-      max-height: 472px;
-    }
     .categories {
       padding: 15rem 0 8rem;
     }
@@ -229,11 +271,24 @@ p {
   
   /* Bigger than 1000 */
   @media (min-width: 1000px) {
+    p {
+        font-size: 1.5rem;
+        &.subtitle {
+            font-size: 2.5rem;
+        }
+    }
+    h1 {
+        margin-bottom: 2rem;
+        font-size: 5.5rem;
+    }
     .section {
       padding: 20rem 0 19rem;
       &.latest {
           padding: 0 0 19rem;
           margin-top: -16rem;
+          .latest-text {
+              margin-top: 3rem;
+          }
       }
     }
     .hero {
