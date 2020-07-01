@@ -127,7 +127,7 @@ p.subtitle {
     font-size: 1.5rem;
   }
   h1 {
-    margin-top: 1rem;
+    margin-top: 0;
     margin-bottom: 1rem;
     font-size: 3rem;
   }
@@ -154,7 +154,7 @@ p.subtitle {
     margin-top: 0 !important;
   }
 }
-/* Bigger than 550 viewport */
+/* Bigger than 550 */
 @media (min-width: 550px) {
   p {
     font-size: 1rem;
