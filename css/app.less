@@ -6,12 +6,6 @@
 body {
     background-image: url('../images/background.jpg');
     font-size: 16px;
-} 
-.bold {
-    font-weight: bold;
-}
-.left-align {
-    text-align: left !important;
 }
 p {
     &.subtitle {
@@ -20,6 +14,13 @@ p {
 }
 hr {
     border-top: 1px solid @ayvygold;
+}
+.bold {
+    font-weight: bold;
+}
+.gold { color: @ayvygold;}
+.left-align {
+    text-align: left !important;
 }
 .show-xs, .show-sm, .show-md, .show-lg {
     display: none;
@@ -31,7 +32,7 @@ hr {
         &.button-primary {
             background-color: @ayvygold !important;
             &:hover {
-                background-color: darken(@ayvygold,8%) !important;
+                background-color: darken(@ayvygold,12%) !important;
             }
         }
         &.button-negative {
@@ -59,11 +60,12 @@ hr {
   .header {
       h1 {
           &.bandname{
+            font-family: 'Oswald', sans-serif;
             position: absolute;
             top:10px;
             left:11%;
             color:white;
-            font-weight: bold;
+            font-weight: 400;
           }
       }
       &.bandphoto {
@@ -142,7 +144,7 @@ hr {
   /* Help
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
   .get-help {
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid @ayvygold;
   }
   
   /* Categories
@@ -191,7 +193,8 @@ hr {
             .section-heading {
                 font-size: 2.5rem;
             }
-            .past-post-heading {font-size: 2rem; padding-bottom:0;}
+            .past-post-heading {font-size: 2rem; padding-bottom:0;margin-top: 2.5rem;}
+            .past-post-description {margin-bottom:1rem;}
         }
         &.latest {
           padding: 0;
@@ -255,21 +258,6 @@ hr {
       text-align: left;
       height: 165px;
     }
-    .phone {
-      position: absolute;
-      top: -7rem;
-      right: 3rem;
-      max-height: 362px;
-      z-index: 3;
-    }
-    .phone + .phone {
-      top: -6rem;
-      display: block;
-      max-width: 73.8%;
-      right: 0;
-      z-index: 2;
-      max-height: 338px;
-    }
     .hero-heading {
       font-size: 2.4rem;
     }
@@ -307,12 +295,19 @@ hr {
     .section {
       padding: 14rem 0 15rem;
       &.latest {
-        padding: 0 0 7rem;
+        padding: 0 0 5rem;
         margin-top: -14rem;
         .latest-text {
             margin-top: 2rem;
         }
       }
+      &.past-posts {
+        margin-top: 0;
+        padding-top: 0;
+        .section-heading {
+            padding-bottom: 4rem;
+            }
+        }
     }
     .hero, .bandphoto {
       padding: 16rem 0 14rem;
@@ -351,10 +346,17 @@ hr {
     .section {
       padding: 20rem 0 19rem;
       &.latest {
-          padding: 0 0 8rem;
+          padding: 0 0 7rem;
           margin-top: -20rem;
           .latest-text {
               margin-top: 3rem;
+          }
+      }
+      &.past-posts {
+          margin-top: 0;
+          padding-top: 0;
+          .section-heading {
+              padding-bottom: 4rem;
           }
       }
     }
@@ -366,13 +368,5 @@ hr {
     }
     .hero-heading {
       font-size: 3.0rem;
-    }
-    .phone {
-      top: -16rem;
-      max-height: 615px;
-    }
-    .phone + .phone {
-      top: -14rem;
-      max-height: 570px;
     }
   }
