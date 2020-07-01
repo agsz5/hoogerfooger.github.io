@@ -52,6 +52,13 @@ hr {
 }
 /* Sections
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.header h1.bandname {
+  position: absolute;
+  top: 10px;
+  left: 11%;
+  color: white;
+  font-weight: bold;
+}
 .header.bandphoto {
   background-image: url('../images/bandphoto_horizontal.jpg');
   background-size: cover;
@@ -270,6 +277,9 @@ hr {
     margin-bottom: 1rem;
     font-size: 4rem;
   }
+  h1.bandname {
+    left: 10% !important;
+  }
   .hero,
   .bandphoto {
     height: 120px;
@@ -318,6 +328,9 @@ hr {
   h1 {
     margin-bottom: 2rem;
     font-size: 5.5rem;
+  }
+  h1.bandname {
+    left: 5% !important;
   }
   .section {
     padding: 20rem 0 19rem;
