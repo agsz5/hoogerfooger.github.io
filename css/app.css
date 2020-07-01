@@ -13,6 +13,15 @@ body {
 p.subtitle {
   font-size: 20px;
 }
+hr {
+  border-top: 1px solid #F8D073;
+}
+.show-xs,
+.show-sm,
+.show-md,
+.show-lg {
+  display: none;
+}
 .button {
   border-radius: 100px;
 }
@@ -26,11 +35,12 @@ p.subtitle {
   background-color: #f6c34c !important;
 }
 .button.gold.button-negative {
+  border: 2px solid #F8D073 !important;
   color: #F8D073 !important;
   background-color: none !important;
 }
 .button.gold.button-negative:hover {
-  border-color: #fadd9a !important;
+  border: 2px solid #fadd9a !important;
   color: #fbe4ad !important;
 }
 .button.white {
@@ -70,6 +80,12 @@ p.subtitle {
   background: transparent !important;
   text-align: left;
 }
+.section.past-posts {
+  padding: 3rem 0 2rem;
+}
+.section.past-posts .section-heading {
+  color: white;
+}
 .section-heading,
 .section-description {
   margin-bottom: 1.2rem;
@@ -85,20 +101,20 @@ p.subtitle {
   -moz-box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.55);
   box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.55);
 }
-/* Values
+/* past-posts
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.values {
+.past-posts {
   color: #fff;
   padding-bottom: 5rem;
 }
-.value-multiplier {
+.past-post-multiplier {
   margin-bottom: 0.5rem;
-  color: #11DFC7;
+  color: #F8D073;
 }
-.value-heading {
+.past-post-heading {
   margin-bottom: 0.3rem;
 }
-.value-description {
+.past-post-description {
   opacity: 0.8;
   font-weight: 300;
 }
@@ -115,16 +131,19 @@ p.subtitle {
 .categories .section-description {
   margin-bottom: 4rem;
 }
-/* Small viewports up to 50px */
+/* Small viewports up to 550px */
 @media (max-width: 550px) {
   .hide-xs {
     display: none;
   }
+  .show-xs {
+    display: block !important;
+  }
   p {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
   p.subtitle {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
   h1 {
     margin-top: 0;
@@ -142,8 +161,18 @@ p.subtitle {
   .section {
     padding: 12rem 0 11rem;
   }
+  .section.past-posts {
+    padding: 1rem 0 1rem;
+  }
+  .section.past-posts .section-heading {
+    font-size: 2.5rem;
+  }
+  .section.past-posts .past-post-heading {
+    font-size: 2rem;
+    padding-bottom: 0;
+  }
   .section.latest {
-    padding: 0 0 11rem;
+    padding: 0;
     margin-top: -8rem;
     text-align: center;
   }
@@ -154,13 +183,19 @@ p.subtitle {
     margin-top: 0 !important;
   }
 }
-/* Bigger than 550 */
+/* Bigger than 550px */
 @media (min-width: 550px) {
+  hr {
+    margin-top: 0;
+  }
+  .show-sm {
+    display: block;
+  }
   p {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
   p.subtitle {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
   h1 {
     margin-bottom: 1rem;
@@ -170,11 +205,23 @@ p.subtitle {
     padding: 12rem 0 11rem;
   }
   .section.latest {
-    padding: 0 0 11rem;
+    padding: 0 0 3rem;
     margin-top: -10rem;
   }
   .section.latest .latest-text {
     margin-top: 1rem;
+  }
+  .section.past-posts {
+    padding: 1rem 0 1rem;
+  }
+  .section.past-posts .section-heading {
+    font-size: 2.5rem;
+    text-align: left;
+    padding-bottom: 1rem;
+  }
+  .section .past-post-heading {
+    font-size: 2rem;
+    padding-bottom: 1rem;
   }
   .bandphoto {
     min-height: 165px;
@@ -204,8 +251,15 @@ p.subtitle {
     font-size: 2.4rem;
   }
 }
-/* Bigger than 750 */
+/* Bigger than 750 , size "md"*/
 @media (min-width: 750px) {
+  .show-sm,
+  show-lg {
+    display: none;
+  }
+  .show-md {
+    display: block;
+  }
   p {
     font-size: 1.5rem;
   }
@@ -227,7 +281,7 @@ p.subtitle {
     padding: 14rem 0 15rem;
   }
   .section.latest {
-    padding: 0 0 15rem;
+    padding: 0 0 7rem;
     margin-top: -14rem;
   }
   .section.latest .latest-text {
@@ -248,6 +302,13 @@ p.subtitle {
 }
 /* Bigger than 1000 */
 @media (min-width: 1000px) {
+  .show-sm,
+  show-md {
+    display: none;
+  }
+  .show-lg {
+    display: block;
+  }
   p {
     font-size: 1.5rem;
   }
@@ -262,8 +323,8 @@ p.subtitle {
     padding: 20rem 0 19rem;
   }
   .section.latest {
-    padding: 0 0 19rem;
-    margin-top: -16rem;
+    padding: 0 0 8rem;
+    margin-top: -20rem;
   }
   .section.latest .latest-text {
     margin-top: 3rem;

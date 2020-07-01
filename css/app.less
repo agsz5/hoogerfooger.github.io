@@ -18,6 +18,12 @@ p {
         font-size: 20px;
     }
 }
+hr {
+    border-top: 1px solid @ayvygold;
+}
+.show-xs, .show-sm, .show-md, .show-lg {
+    display: none;
+}
 .button {
     border-radius: 100px;
     &.gold {
@@ -29,10 +35,11 @@ p {
             }
         }
         &.button-negative {
+            border:2px solid @ayvygold !important;
             color:@ayvygold !important;
             background-color: none !important;
             &:hover {
-                border-color: lighten(@ayvygold,8%) !important;
+                border:2px solid lighten(@ayvygold,8%) !important;
                 color:lighten(@ayvygold,12%) !important;
             }
         }
@@ -77,6 +84,12 @@ p {
         background: transparent !important;
         text-align: left;
     }
+    &.past-posts {
+        padding: 3rem 0 2rem;
+        .section-heading {
+            color: white;
+        }
+    }
   }
   .section-heading,
   .section-description {
@@ -96,22 +109,22 @@ p {
         box-shadow: 0px 10px 20px 2px rgba(0,0,0,0.55);
         }
   
-  /* Values
+  /* past-posts
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
-  .values {
+  .past-posts {
     // background-image: url('../images/background.jpg');
     // background-size: cover;
     color: #fff;
     padding-bottom: 5rem;
   }
-  .value-multiplier {
+  .past-post-multiplier {
     margin-bottom: .5rem;
-    color: #11DFC7;
+    color:@ayvygold;
   }
-  .value-heading {
+  .past-post-heading {
     margin-bottom: .3rem;
   }
-  .value-description {
+  .past-post-description {
     opacity: .8;
     font-weight: 300;
   }
@@ -134,15 +147,18 @@ p {
   }
   
 
-  /* Small viewports up to 50px */
+  /* Small viewports up to 550px */
  @media (max-width:550px) {
     .hide-xs {
         display: none;
     }
+    .show-xs {
+        display: block !important;
+    }
     p {
-        font-size: 1rem;
+        font-size: 1.5rem;
         &.subtitle {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
         }
     }
      h1 {
@@ -160,8 +176,15 @@ p {
      }
      .section {
         padding: 12rem 0 11rem;
+        &.past-posts {
+            padding: 1rem 0 1rem;
+            .section-heading {
+                font-size: 2.5rem;
+            }
+            .past-post-heading {font-size: 2rem; padding-bottom:0;}
+        }
         &.latest {
-          padding: 0 0 11rem;
+          padding: 0;
           margin-top: -8rem;
           text-align: center;
           .latest-text {
@@ -176,12 +199,18 @@ p {
       }
  }
 
-  /* Bigger than 550 */
+  /* Bigger than 550px */
   @media (min-width: 550px) {
+    hr {
+        margin-top: 0;
+    }
+    .show-sm {
+        display:block;
+    }
     p {
-        font-size: 1rem;
+        font-size: 1.5rem;
         &.subtitle {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
         }
     }
     h1 {
@@ -191,12 +220,22 @@ p {
     .section {
       padding: 12rem 0 11rem;
       &.latest {
-        padding: 0 0 11rem;
+        padding: 0 0 3rem;
         margin-top: -10rem;
         .latest-text {
             margin-top: 1rem;
         }
       }
+      &.past-posts {
+        padding: 1rem 0 1rem;
+        .section-heading {
+            font-size: 2.5rem;
+            text-align: left;
+            padding-bottom: 1rem;
+            }
+        }
+        .past-post-heading {font-size: 2rem; padding-bottom:1rem;
+        }
     }
     .bandphoto {
         min-height: 165px;
@@ -226,8 +265,14 @@ p {
     }
   }
   
-  /* Bigger than 750 */
+  /* Bigger than 750 , size "md"*/
   @media (min-width: 750px) {
+    .show-sm, show-lg {
+        display:none;
+    }
+    .show-md {
+        display: block;
+    }
     p {
         font-size: 1.5rem;
         &.subtitle {
@@ -248,7 +293,7 @@ p {
     .section {
       padding: 14rem 0 15rem;
       &.latest {
-        padding: 0 0 15rem;
+        padding: 0 0 7rem;
         margin-top: -14rem;
         .latest-text {
             margin-top: 2rem;
@@ -270,6 +315,12 @@ p {
   
   /* Bigger than 1000 */
   @media (min-width: 1000px) {
+    .show-sm, show-md {
+        display:none;
+    }
+    .show-lg {
+        display: block;
+    }
     p {
         font-size: 1.5rem;
         &.subtitle {
@@ -283,8 +334,8 @@ p {
     .section {
       padding: 20rem 0 19rem;
       &.latest {
-          padding: 0 0 19rem;
-          margin-top: -16rem;
+          padding: 0 0 8rem;
+          margin-top: -20rem;
           .latest-text {
               margin-top: 3rem;
           }
