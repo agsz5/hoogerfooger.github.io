@@ -10,6 +10,9 @@ p.subtitle {
 hr {
   border-top: 1px solid #F8D073;
 }
+.pad-top20 {
+  padding-top: 20px !important;
+}
 .bold {
   font-weight: bold;
 }
@@ -131,7 +134,7 @@ hr {
 }
 /* Help
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.get-help {
+.get-in-touch {
   border-bottom: 1px solid #F8D073;
 }
 /* Categories
@@ -172,6 +175,17 @@ hr {
   .section {
     padding: 12rem 0 11rem;
   }
+  .section.latest {
+    padding: 0;
+    margin-top: -8rem;
+    text-align: center;
+  }
+  .section.latest .latest-text .subtitle {
+    margin-bottom: 1.5rem;
+  }
+  .section.latest .latest-button {
+    margin-top: 0 !important;
+  }
   .section.past-posts {
     padding: 1rem 0 1rem;
   }
@@ -186,16 +200,8 @@ hr {
   .section.past-posts .past-post-description {
     margin-bottom: 1rem;
   }
-  .section.latest {
-    padding: 0;
-    margin-top: -8rem;
-    text-align: center;
-  }
-  .section.latest .latest-text .subtitle {
-    margin-bottom: 1.5rem;
-  }
-  .section.latest .latest-button {
-    margin-top: 0 !important;
+  .section.get-in-touch {
+    padding: 3rem 0 2rem;
   }
 }
 /* Bigger than 550px */
@@ -234,9 +240,12 @@ hr {
     text-align: left;
     padding-bottom: 1rem;
   }
-  .section .past-post-heading {
+  .section.past-posts .past-post-heading {
     font-size: 2rem;
     padding-bottom: 1rem;
+  }
+  .section.get-in-touch {
+    padding: 3rem 0 2rem;
   }
   .bandphoto {
     min-height: 165px;
@@ -296,6 +305,9 @@ hr {
   }
   .section.past-posts .section-heading {
     padding-bottom: 4rem;
+  }
+  .section.get-in-touch {
+    padding: 4rem 0 5rem;
   }
   .hero,
   .bandphoto {
