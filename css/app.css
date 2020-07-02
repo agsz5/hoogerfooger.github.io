@@ -36,6 +36,7 @@ hr {
 }
 .button.gold.button-primary {
   background-color: #F8D073 !important;
+  text-shadow: 1px 1px 6px #7f5b06;
 }
 .button.gold.button-primary:hover {
   background-color: #f5bc39 !important;
@@ -65,6 +66,7 @@ hr {
   left: 11%;
   color: white;
   font-weight: 400;
+  text-shadow: 1px 1px 6px #000000;
 }
 .header.bandphoto {
   background-image: url('../images/bandphoto_horizontal.jpg');
@@ -163,6 +165,9 @@ hr {
     margin-top: 0;
     margin-bottom: 1rem;
     font-size: 3rem;
+  }
+  h1.bandname {
+    left: 15px !important;
   }
   .album {
     max-width: 150px;
