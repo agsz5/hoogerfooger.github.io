@@ -10,6 +10,21 @@ p.subtitle {
 hr {
   border-top: 1px solid #F8D073;
 }
+.pad-bottom20 {
+  padding-bottom: 20px !important;
+}
+.pad-bottom25 {
+  padding-bottom: 25px !important;
+}
+.pad-bottom30 {
+  padding-bottom: 30px !important;
+}
+.pad-bottom35 {
+  padding-bottom: 35px !important;
+}
+.pad-bottom40 {
+  padding-bottom: 40px !important;
+}
 .pad-top20 {
   padding-top: 20px !important;
 }
@@ -190,6 +205,11 @@ hr {
 /* Get in Touch or Contact
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .get-in-touch {
+  border-bottom: none;
+}
+/* Social media Section
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.social-media {
   border-bottom: 1px solid #F8D073;
 }
 /* Categories
