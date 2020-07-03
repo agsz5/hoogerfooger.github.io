@@ -13,6 +13,18 @@ hr {
 .pad-top20 {
   padding-top: 20px !important;
 }
+.pad-top25 {
+  padding-top: 25px !important;
+}
+.pad-top30 {
+  padding-top: 30px !important;
+}
+.pad-top35 {
+  padding-top: 35px !important;
+}
+.pad-top40 {
+  padding-top: 40px !important;
+}
 .bold {
   font-weight: bold;
 }
@@ -59,6 +71,23 @@ hr {
 }
 /* Sections
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper i {
+  padding: 10px;
+  text-shadow: 0px 6px 8px rgba(0, 0, 0, 0.6);
+  transition: all ease-in-out 150ms;
+}
+.wrapper i:hover {
+  margin-top: -3px;
+  text-shadow: 0px 14px 10px rgba(0, 0, 0, 0.4);
+}
+.wrapper a {
+  color: #F8D073;
+}
 .header h1.bandname {
   font-family: 'Oswald', sans-serif;
   position: absolute;
@@ -135,7 +164,7 @@ hr {
   opacity: 0.8;
   font-weight: 300;
 }
-/* Help
+/* Get in Touch or Contact
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .get-in-touch {
   border-bottom: 1px solid #F8D073;
@@ -206,7 +235,8 @@ hr {
   .section.past-posts .past-post-description {
     margin-bottom: 1rem;
   }
-  .section.get-in-touch {
+  .section.get-in-touch,
+  .section.social-media {
     padding: 3rem 0 2rem;
   }
 }
@@ -250,7 +280,8 @@ hr {
     font-size: 2rem;
     padding-bottom: 1rem;
   }
-  .section.get-in-touch {
+  .section.get-in-touch,
+  .section.social-media {
     padding: 3rem 0 2rem;
   }
   .bandphoto {
@@ -312,7 +343,8 @@ hr {
   .section.past-posts .section-heading {
     padding-bottom: 4rem;
   }
-  .section.get-in-touch {
+  .section.get-in-touch,
+  .section.social-media {
     padding: 4rem 0 5rem;
   }
   .hero,
