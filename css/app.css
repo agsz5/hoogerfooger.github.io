@@ -76,6 +76,29 @@ hr {
   justify-content: center;
   align-items: center;
 }
+.wrapper.social-media-top {
+  display: block;
+  text-align: right;
+  justify-content: right;
+  align-items: right;
+  position: absolute;
+  top: 10px;
+  right: 5%;
+  color: white;
+  z-index: 1000;
+}
+.wrapper.social-media-top i {
+  padding: 10px;
+  text-shadow: 0px 6px 8px rgba(0, 0, 0, 0.6);
+  transition: all ease-in-out 150ms;
+}
+.wrapper.social-media-top i:hover {
+  margin-top: -3px;
+  text-shadow: 0px 14px 10px rgba(0, 0, 0, 0.4);
+}
+.wrapper.social-media-top a {
+  color: white;
+}
 .wrapper i {
   padding: 10px;
   text-shadow: 0px 6px 8px rgba(0, 0, 0, 0.6);
@@ -180,7 +203,12 @@ hr {
 /* Small viewports up to 550px */
 @media (max-width: 550px) {
   .hide-xs {
-    display: none;
+    display: none !important;
+  }
+  .show-sm,
+  .show-md,
+  .show-lg {
+    display: none !important;
   }
   .show-xs {
     display: block !important;
@@ -198,6 +226,9 @@ hr {
   }
   h1.bandname {
     left: 15px !important;
+  }
+  .wrapper.social-media-top {
+    right: 5px !important;
   }
   .album {
     max-width: 150px;
@@ -242,11 +273,19 @@ hr {
 }
 /* Bigger than 550px */
 @media (min-width: 550px) {
-  hr {
-    margin-top: 0;
+  .hide-sm {
+    display: none !important;
+  }
+  .show-xs,
+  .show-md,
+  .show-lg {
+    display: none !important;
   }
   .show-sm {
-    display: block;
+    display: block !important;
+  }
+  hr {
+    margin-top: 0;
   }
   p {
     font-size: 1.5rem;
@@ -257,6 +296,9 @@ hr {
   h1 {
     margin-bottom: 1rem;
     font-size: 3rem;
+  }
+  .wrapper.social-media-top {
+    right: 7% !important;
   }
   .section {
     padding: 12rem 0 11rem;
@@ -299,18 +341,25 @@ hr {
 }
 /* Bigger than 750 , size "md"*/
 @media (min-width: 750px) {
+  .hide-md {
+    display: none !important;
+  }
+  .show-xs,
   .show-sm,
-  show-lg {
-    display: none;
+  .show-lg {
+    display: none !important;
   }
   .show-md {
-    display: block;
+    display: block !important;
   }
   p {
     font-size: 1.5rem;
   }
   p.subtitle {
     font-size: 2rem;
+  }
+  .wrapper.social-media-top {
+    right: 5% !important;
   }
   h1 {
     margin-bottom: 1rem;
@@ -362,18 +411,25 @@ hr {
 }
 /* Bigger than 1000 */
 @media (min-width: 1000px) {
+  .hide-lg {
+    display: none !important;
+  }
+  .show-xs,
   .show-sm,
-  show-md {
-    display: none;
+  .show-md {
+    display: none !important;
   }
   .show-lg {
-    display: block;
+    display: block !important;
   }
   p {
     font-size: 1.5rem;
   }
   p.subtitle {
     font-size: 2.5rem;
+  }
+  .wrapper.social-media-top {
+    right: 4% !important;
   }
   h1 {
     margin-bottom: 2rem;
