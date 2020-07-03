@@ -200,6 +200,8 @@ hr {
 .categories .section-description {
   margin-bottom: 4rem;
 }
+/* Responsiveness
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Small viewports up to 550px */
 @media (max-width: 550px) {
   .hide-xs {
