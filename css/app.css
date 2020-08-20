@@ -40,6 +40,9 @@ hr {
 .pad-top40 {
   padding-top: 40px !important;
 }
+.underline {
+  text-decoration: underline;
+}
 .bold {
   font-weight: bold;
 }
